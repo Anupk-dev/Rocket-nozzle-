@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rocket Engine Nozzle Optimization</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Rocket Nozzle Optimization</h1>
+      <p>Design, analyze, and optimize your rocket nozzle using calculus principles.</p>
+    </header>
+
+    <main>
+      <section class="controls">
+        <h2>Nozzle Parameters</h2>
+        <label>
+          Throat Radius:
+          <input type="range" id="throatRadius" min="1" max="5" step="0.1" value="2.5">
+          <span id="throatRadiusValue">2.5</span> cm
+        </label>
+        <label>
+          Exit Radius:
+          <input type="range" id="exitRadius" min="5" max="10" step="0.1" value="7.5">
+          <span id="exitRadiusValue">7.5</span> cm
+        </label>
+        <label>
+          Nozzle Length:
+          <input type="range" id="nozzleLength" min="10" max="30" step="1" value="20">
+          <span id="nozzleLengthValue">20</span> cm
+        </label>
+      </section>
+
+      <section class="visualization">
+        <h2>Visualization</h2>
+        <div id="nozzleGraph"></div>
+      </section>
+
+      <section class="analysis">
+        <h2>Thrust Analysis</h2>
+        <p><strong>Volume:</strong> <span id="volume">0</span> cm³</p>
+        <p><strong>Thrust:</strong> <span id="thrust">0</span> N</p>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+            
